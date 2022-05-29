@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">Other apps</string>
+    <string name="title">Title: %1s</string>
+    <string name="artist">Artist: %1s</string>
+    <string name="album">Album: %1s</string>
+    <string name="autoPlayWhenCloseToEar">Auto play music when device close to ear</string>
+    <string name="autoPauseWhenFarFromEar">Auto pause when device far from ear</string>
+    <string name="autoPlayWhenClickMusic">Auto play when click music</string>
+    <string name="update">Update</string>
+    <string name="typeSomething">Field must not be empty</string>
+    <string name="added">Added to playlist</string>
+    <string name="removedLater">This music will be removed after next open</string>
+    <string name="updated">Updated</string>
+    <string name="updatingFailed">Updating failed</string>
+    <string name="failedGetInfo">Failed to get song info</string>
+    <string name="error">Error: %1s</string>
 </resources>

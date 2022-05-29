@@ -4,11 +4,75 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".Activities.MainActivity">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/topPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/playlist"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/auto"
+            android:layout_margin="10dp"
+            android:src="@drawable/ic_playlist"
+            android:background="@drawable/bg_ic"
+            android:focusable="true"
+            android:clickable="true"
+            android:paddingHorizontal="3dp"
+            android:layout_width="0dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_height="50dp"/>
+        <ImageView
+            android:id="@+id/day"
+            app:layout_constraintTop_toTopOf="@id/playlist"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/playlist"
+            android:layout_margin="10dp"
+            android:src="@drawable/ic_sun"
+            android:background="@drawable/bg_ic"
+            android:focusable="true"
+            android:clickable="true"
+            android:paddingHorizontal="5dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"/>
+        <ImageView
+            android:id="@+id/auto"
+            app:layout_constraintTop_toTopOf="@id/playlist"
+            app:layout_constraintStart_toEndOf="@id/night"
+            app:layout_constraintBottom_toBottomOf="@id/playlist"
+            android:layout_margin="10dp"
+            android:src="@drawable/ic_auto"
+            android:background="@drawable/bg_ic"
+            android:focusable="true"
+            android:clickable="true"
+            android:paddingHorizontal="5dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"/>
+        <ImageView
+            android:id="@+id/night"
+            app:layout_constraintTop_toTopOf="@id/playlist"
+            app:layout_constraintStart_toEndOf="@id/day"
+            android:layout_margin="10dp"
+            android:src="@drawable/ic_night"
+            android:background="@drawable/bg_ic"
+            android:focusable="true"
+            android:clickable="true"
+            android:paddingHorizontal="3dp"
+            app:layout_constraintBottom_toBottomOf="@id/playlist"
+            android:layout_width="35dp"
+            android:layout_height="35dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
     <androidx.recyclerview.widget.RecyclerView
+        app:layout_constraintTop_toBottomOf="@id/topPanel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="5dp"
         android:id="@+id/recycler"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="0dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

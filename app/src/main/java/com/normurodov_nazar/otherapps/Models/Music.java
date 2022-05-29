@@ -1,12 +1,38 @@
 package com.normurodov_nazar.otherapps.Models;
 
 public class Music {
-    final String title;
-    final String path;
-    final String duration;
-    final String album;
+    public final int id;
 
-    public Music(String title, String path, String duration, String album) {
+
+    String artist;
+
+    String title;
+
+    final String path;
+
+    final String duration;
+
+    public void setArtist(String artist) {
+        this.artist = artist;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setAlbum(String album) {
+        this.album = album;
+    }
+
+    String album;
+
+    public String getArtist() {
+        return artist;
+    }
+
+    public Music(int id,String title, String path, String duration, String album, String artist) {
+        this.id = id;
+        this.artist = artist;
         this.title = title;
         this.path = path;
         this.duration = duration;

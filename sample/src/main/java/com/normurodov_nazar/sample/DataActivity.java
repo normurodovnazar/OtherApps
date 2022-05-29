@@ -3,7 +3,6 @@ package com.normurodov_nazar.sample;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.widget.TextClock;
 import android.widget.TextView;
 
 public class DataActivity extends AppCompatActivity {

@@ -1,29 +1,31 @@
-package com.normurodov_nazar.otherapps.Sources;
+package com.normurodov_nazar.otherapps.Customizations;
 
-import android.animation.Animator;
-import android.animation.AnimatorListenerAdapter;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.database.Cursor;
-import android.location.GnssAntennaInfo;
-import android.location.GpsStatus;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.net.Uri;
 import android.provider.MediaStore;
 import android.util.Log;
-import android.view.View;
-import android.view.animation.AlphaAnimation;
 
+import com.normurodov_nazar.otherapps.Listeners.SuccessListener;
 import com.normurodov_nazar.otherapps.Models.Music;
+import com.normurodov_nazar.otherapps.Models.Paths;
 
 import java.io.File;
-import java.sql.Time;
 import java.util.ArrayList;
-import java.util.Calendar;
-
-import javax.xml.transform.ErrorListener;
+import java.util.List;
 
 public class Hey {
     public static void print(String a, String s) {
         Log.e(a, s);
+    }
+
+    public static void showEditDialog(Context context, SuccessListener successListener){
+        EditFieldDialog dialog = new EditFieldDialog(context,successListener);
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialog.show();
     }
 
     public static ArrayList<Music> getAllSongs(Context context) {
@@ -33,6 +35,8 @@ public class Hey {
                 MediaStore.Audio.Media.DATA,
                 MediaStore.Audio.Media.DURATION,
                 MediaStore.Audio.Media.ALBUM,
+                MediaStore.Audio.Media.ARTIST,
+                MediaStore.Audio.Media._ID
         };
         //MediaStore.Audio.Media.
         Cursor cursor = context.getContentResolver().query(
@@ -43,7 +47,7 @@ public class Hey {
                 null
         );
         while (cursor.moveToNext()) {
-            musicArrayList.add(new Music(cursor.getString(0), cursor.getString(1), cursor.getString(2), cursor.getString(3)));
+            musicArrayList.add(new Music( cursor.getInt(5),cursor.getString(0), cursor.getString(1), cursor.getString(2), cursor.getString(3),cursor.getString(4)));
         }
         cursor.close();
         return musicArrayList;
@@ -100,14 +104,32 @@ public class Hey {
         return s.length()==1 ? "0"+s : s;
     }
 
-    public static void startAnimation(View view){
-        view.clearAnimation();
-        AlphaAnimation alphaAnimation = new AlphaAnimation(1,0);
-        alphaAnimation.setDuration(800);
-        view.startAnimation(alphaAnimation);
-    }
-
     public static SharedPreferences getSharedPreferences(Context context){
         return context.getSharedPreferences("a",Context.MODE_PRIVATE);
+    }
+
+    public static ArrayList<Music> getMusicsFromPaths(Context context,List<Paths> musicPaths) {
+        ArrayList<Music> musics = new ArrayList<>();
+        Uri uri = MediaStore.Audio.Media.EXTERNAL_CONTENT_URI;
+        String[] projection = {
+                MediaStore.Audio.Media.TITLE,
+                MediaStore.Audio.Media.DATA,
+                MediaStore.Audio.Media.DURATION,
+                MediaStore.Audio.Media.ALBUM,
+                MediaStore.Audio.Media.ARTIST,
+                MediaStore.Audio.Media._ID
+        };
+        for (Paths path : musicPaths){
+            Cursor cursor = context.getContentResolver().query(uri,projection,MediaStore.Audio.Media.DATA + " = ?",new String[]{path.getPath()},null);
+            if (cursor!=null) {
+                if (cursor.getCount()>0) {
+                    if (cursor.moveToFirst()) {
+                        musics.add(new Music( cursor.getInt(5),cursor.getString(0), cursor.getString(1), cursor.getString(2), cursor.getString(3),cursor.getString(4)));
+                    }
+                }
+                cursor.close();
+            }
+        }
+        return musics;
     }
 }

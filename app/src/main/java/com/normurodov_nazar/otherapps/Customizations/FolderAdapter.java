@@ -1,4 +1,4 @@
-package com.normurodov_nazar.otherapps.Sources;
+package com.normurodov_nazar.otherapps.Customizations;
 
 import android.content.Context;
 import android.view.LayoutInflater;
