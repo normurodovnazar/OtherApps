@@ -82,7 +82,6 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/autoPlayWhenCloseToEar"/>
     <CheckBox
-        android:id="@+id/autoPlayWhenClickMusic"
         android:text="@string/autoPlayWhenClickMusic"
         android:layout_marginHorizontal="5dp"
         android:layout_marginVertical="5dp"
@@ -106,7 +105,6 @@
         android:layout_width="45dp"
         android:layout_height="45dp"/>
     <ImageView
-        android:id="@+id/restart"
         android:src="@drawable/ic_restart"
         android:background="@drawable/bg_ic"
         app:layout_constraintBottom_toTopOf="@id/progress"
@@ -117,7 +115,6 @@
         android:layout_width="45dp"
         android:layout_height="45dp"/>
     <ImageView
-        android:id="@+id/addToPlaylist"
         android:src="@drawable/ic_playlist_add"
         android:padding="6dp"
         android:background="@drawable/bg_ic"
@@ -154,7 +151,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
     <ImageView
-        android:id="@+id/prev"
         android:clickable="true"
         android:focusable="true"
         android:layout_width="50dp"
@@ -179,7 +175,6 @@
         app:layout_constraintEnd_toStartOf="@id/repeat"
         app:layout_constraintStart_toEndOf="@id/shuffle" />
     <ImageView
-        android:id="@+id/next"
         android:clickable="true"
         android:focusable="true"
         android:layout_width="50dp"

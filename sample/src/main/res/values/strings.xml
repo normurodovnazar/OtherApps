@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">Sample</string>
+    <string name="app_name">Universities</string>
+    <string name="university">University: %1s</string>
+    <string name="stateOrProvince">State or province: %1s</string>
+    <string name="country">Country: %1s</string>
+    <string name="openUniversityPage">University webpage</string>
+    <string name="error">Error: %1s</string>
+    <string name="errorNetwork">Can\'t connect to network</string>
+    <string name="retry">Retry</string>
+    <string name="noData">No data</string>
+    <string name="universityName">Type university name here</string>
 </resources>

@@ -1,61 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/splash"
-        android:visibility="visible"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler"
+        app:layout_constraintTop_toBottomOf="@id/search_bar"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:src="@mipmap/ic_launcher"
-        android:layout_width="200dp"
-        android:layout_height="200dp"/>
+        android:layout_marginVertical="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/helloPage"
-        android:visibility="gone"
+        android:id="@+id/errorPage"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <TextView
-            android:id="@+id/topText"
-            android:text="Lorem Ipsum"
-            android:gravity="center"
-            android:textSize="20sp"
-            android:textColor="#FF0000"
-            android:layout_marginTop="80dp"
+            android:id="@+id/errorText"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            app:layout_constraintVertical_bias="0.4"
+            android:gravity="center"
+            android:textStyle="bold"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
         <TextView
-            android:id="@+id/centerText"
-            app:layout_constraintTop_toBottomOf="@id/topText"
-            android:text="Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description "
-            android:layout_marginHorizontal="20sp"
-            android:textColor="@color/black"
-            android:textStyle="italic"
-            android:layout_marginTop="30dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-        <Button
-            android:id="@+id/nextButton"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/reload"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintTop_toBottomOf="@id/errorText"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginBottom="50dp"
-            android:text="NEXT"
+            android:text="@string/retry"
+            android:textSize="20sp"
+            android:layout_marginVertical="10dp"
+            android:textColor="@color/blue"
+            android:textStyle="italic"
+            android:paddingHorizontal="10dp"
+            android:background="@drawable/bg_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler"
+    <ProgressBar
+        android:id="@+id/progressBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:indeterminateTint="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/search_bar"
+        app:layout_constraintTop_toTopOf="parent"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="wrap_content">
+        <EditText
+            android:textColor="@color/black"
+            android:hint="@string/universityName"
+            android:textColorHint="#9F9F9F"
+            app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/searchText"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/not_pressed"
+            app:layout_constraintEnd_toStartOf="@id/searchButton"
+            android:padding="8dp"
+            android:layout_marginVertical="10dp"
+            android:layout_marginHorizontal="20sp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+        <ImageView
+            android:id="@+id/searchButton"
+            android:src="@drawable/ic_search"
+            android:background="@drawable/not_pressed"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/searchText"
+            app:layout_constraintBottom_toBottomOf="@id/searchText"
+            android:layout_marginHorizontal="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_width="35dp"
+            android:layout_height="0dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
