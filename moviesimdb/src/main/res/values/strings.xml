@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Movies info</string>
+    <string name="hint">Type movie name</string>
+    <string name="empty">Field must not be empty</string>
+    <string name="errorUnknown">Unknown error</string>
+    <string name="error">Error: %1s</string>
+    <string name="info">Title: %1s \nReleased: %2s \nDuration: %3s \nGenre: %4s \nDirector: %5s \nWriter: %6s \nActors: %7s \nAbout: %8s \nLanguage: %9s \nCountry: %10s \nAwards: %11s \nProduction: %12s \nType: %13s \nRating: %14s \nVotes: %15s \nProfit: %16s</string>
+    <string name="gotoWebsite">Goto website</string>
+</resources>

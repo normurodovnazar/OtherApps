@@ -1,6 +1,8 @@
 package com.normurodov_nazar.sample;
 
 import android.content.SharedPreferences;
+import android.graphics.Canvas;
+import android.graphics.Paint;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -42,6 +44,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void loadData(String text) {
+
+        Canvas canvas = new Canvas();
+
+        canvas.drawLine(0,0,5,5,new Paint());
         showLoading();
         retrofit = new Retrofit.Builder()
                 .baseUrl("http://universities.hipolabs.com")
@@ -71,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void showLoading() {
+    private void showLoading(){
         Log.e("state","showLoading");
         b.recycler.setVisibility(View.GONE);
         b.errorPage.setVisibility(View.GONE);

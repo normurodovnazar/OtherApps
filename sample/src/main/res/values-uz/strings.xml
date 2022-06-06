@@ -10,4 +10,5 @@
     <string name="retry">Qayta urinish</string>
     <string name="noData">Ma\'lunot yo\'q</string>
     <string name="universityName">Bu yerga universitet nomini yozing</string>
+    <string name="info">Nomi: %1s /nChiqarilgan: %2s /nDavomiyligi: %3s /nJanri: %4s /nRejissyor: %5s /nSenariy: %6s /nAktyorlar: %7s /nHaqida: %8s /nTili: %9s /nMamlakat: %10s /nMukofotlari: %11s /nMahsuloti: %12s /nTuri: %13s /nReyting: %14s /nOvozlar: %15s /nOlingan foyda: %16s</string>
 </resources>
