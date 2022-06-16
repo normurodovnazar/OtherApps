@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Universitetlar</string>
+    <string name="university">Universitet: %1s</string>
+    <string name="stateOrProvince">Mahalliy hudud: %1s</string>
+    <string name="country">Mamlakat: %1s</string>
+    <string name="openUniversityPage">Universitet vebsahifasi</string>
+    <string name="error">Xatolik: %1s</string>
+    <string name="errorNetwork">Tarmoqqa ulanib bo\'lmadi</string>
+    <string name="retry">Qayta urinish</string>
+    <string name="noData">Ma\'lunot yo\'q</string>
+    <string name="universityName">Bu yerga universitet nomini yozing</string>
+    <string name="info">Nomi: %1s /nChiqarilgan: %2s /nDavomiyligi: %3s /nJanri: %4s /nRejissyor: %5s /nSenariy: %6s /nAktyorlar: %7s /nHaqida: %8s /nTili: %9s /nMamlakat: %10s /nMukofotlari: %11s /nMahsuloti: %12s /nTuri: %13s /nReyting: %14s /nOvozlar: %15s /nOlingan foyda: %16s</string>
+</resources>

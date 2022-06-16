@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Kun tartibi</string>
+    <string name="typeTitle">Sarlavhani shu yerga yozing</string>
+    <string name="timeNotSet">Vaqt o\'rnatilmagan</string>
+    <string name="setTime">Vaqtni o\'rnatish</string>
+    <string name="done">Tayyor</string>
+    <string name="setTimeAndTitle">Siz sarlavha va vaqtni o\'rnatishingiz kerak</string>
+    <string name="time">Vaqt: %1s</string>
+</resources>

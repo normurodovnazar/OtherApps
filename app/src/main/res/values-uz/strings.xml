@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Other apps</string>
+    <string name="title">Nomi: %1s</string>
+    <string name="artist">Ijrochi: %1s</string>
+    <string name="album">Album: %1s</string>
+    <string name="autoPlayWhenCloseToEar">Qurilma quloqqa yaqinlashtirilganda avto ijro etish</string>
+    <string name="autoPauseWhenFarFromEar">Qurilma quloqdan uzoqlashtirilganda avto pauza</string>
+    <string name="autoPlayWhenClickMusic">Qo\'shiqqa kirilganda avto ijro etish</string>
+    <string name="update">Yangilamoq</string>
+    <string name="typeSomething">Maydon bo\'sh bo\'lmasligi kerak</string>
+    <string name="added">Playlistga qo\'shildi</string>
+    <string name="removedLater">Bu qo\'shiq keyingi kirishda yo\'qotiladi</string>
+    <string name="updated">Yangilandi</string>
+    <string name="updatingFailed">Yangliash muvaffaqiyatsiz yakunlandi</string>
+    <string name="failedGetInfo">Qo\'shiq ma\'umotlarini o\'qishda xatolik yuz berdi</string>
+    <string name="error">Xatolik: %1s</string>
+</resources>

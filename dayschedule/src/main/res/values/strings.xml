@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Day schedule</string>
+    <string name="typeTitle">Type title here</string>
+    <string name="timeNotSet">Time not set</string>
+    <string name="setTime">Set time</string>
+    <string name="done">Done</string>
+    <string name="setTimeAndTitle">You must set title and time</string>
+    <string name="time">Time: %1s</string>
+</resources>
