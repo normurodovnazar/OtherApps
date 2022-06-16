@@ -8,6 +8,7 @@
     tools:context=".MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        app:layout_constraintVertical_bias="0.01"
         android:visibility="visible"
         android:id="@+id/search_bar"
         app:layout_constraintBottom_toTopOf="@id/recycler"
